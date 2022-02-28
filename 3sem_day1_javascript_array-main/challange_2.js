@@ -11,3 +11,32 @@ HINT: Use an if/else statement 😉
 
 GOOD LUCK 😀
 */
+const Mark = {
+  height: 1.69,
+  mass: 78,
+};
+
+const John = {
+  height: 1.95,
+  mass: 92,
+};
+
+function BMICalc(mass, height) {
+  let BMI = (mass / height ** 2) * 10000;
+  return BMI.toFixed(2);
+}
+
+console.log(BMICalc(Mark.height, Mark.mass));
+console.log(BMICalc(John.height, John.mass));
+
+let markHigherBMI =
+  BMICalc(John.height, John.mass) < BMICalc(Mark.height, Mark.mass)
+    ? `Mark's BMI (${BMICalc(Mark.height, Mark.mass)}) is higher than John's!`
+    : `John's BMI (${BMICalc(John.height, John.mass)}) is higher than Mark's!`;
+
+console.log(markHigherBMI);
+/*
+let markHigherBMI =
+  BMICalc(John.height, John.mass) < BMICalc(Mark.height, Mark.mass)
+    ? "Mark's BMI is higher than John's!"
+    : "John's BMI is higher than Mark's!";*/

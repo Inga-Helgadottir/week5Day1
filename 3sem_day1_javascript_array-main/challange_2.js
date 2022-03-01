@@ -26,17 +26,12 @@ function BMICalc(mass, height) {
   return BMI.toFixed(2);
 }
 
-console.log(BMICalc(Mark.height, Mark.mass));
-console.log(BMICalc(John.height, John.mass));
+let MarkBMI = BMICalc(Mark.height, Mark.mass);
+let JohnBMI = BMICalc(John.height, John.mass);
 
 let markHigherBMI =
-  BMICalc(John.height, John.mass) < BMICalc(Mark.height, Mark.mass)
-    ? `Mark's BMI (${BMICalc(Mark.height, Mark.mass)}) is higher than John's!`
-    : `John's BMI (${BMICalc(John.height, John.mass)}) is higher than Mark's!`;
+  JohnBMI < MarkBMI
+    ? `Mark's BMI (${MarkBMI}) is higher than John's!(${JohnBMI})`
+    : `John's BMI (${JohnBMI}) is higher than Mark's!(${MarkBMI})`;
 
 console.log(markHigherBMI);
-/*
-let markHigherBMI =
-  BMICalc(John.height, John.mass) < BMICalc(Mark.height, Mark.mass)
-    ? "Mark's BMI is higher than John's!"
-    : "John's BMI is higher than Mark's!";*/

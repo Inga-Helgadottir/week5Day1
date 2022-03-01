@@ -52,3 +52,11 @@ person.friends.forEach((friend) => {
 const arrayFunction = (num1, num2, num3) => {
   return num1 + num2 + num3;
 };
+
+let num1 = 10;
+let num2 = 40;
+let isHigher = num1 < num2 ? "num1 is smaller" : "num2 is smaller";
+console.log(isHigher);
+
+let testing = `testing ${num1} this`;
+console.log(testing);

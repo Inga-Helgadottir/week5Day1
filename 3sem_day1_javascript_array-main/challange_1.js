@@ -27,17 +27,15 @@ function BMICalc(mass, height) {
   return BMI.toFixed(2);
 }
 
-console.log(BMICalc(Mark.height, Mark.mass));
-console.log(BMICalc(John.height, John.mass));
-let markHigherBMI =
-  BMICalc(John.height, John.mass) < BMICalc(Mark.height, Mark.mass);
-console.log(markHigherBMI);
+let MarkBMI = BMICalc(Mark.height, Mark.mass);
+let JohnBMI = BMICalc(John.height, John.mass);
 
-//other stuff
-let num1 = 10;
-let num2 = 40;
-let isHigher = num1 < num2 ? "num1 is smaller" : "num2 is smaller";
-console.log(isHigher);
-
-let testing = `testing ${num1} this`;
-console.log(testing);
+let markHigherBMI = JohnBMI < MarkBMI;
+console.log(
+  "JohnBMI: " +
+    JohnBMI +
+    ", MarkBMI: " +
+    MarkBMI +
+    ". JohnBMI < MarkBMI = " +
+    markHigherBMI
+);

@@ -29,7 +29,21 @@ const filterFunction = (data) => {
     );
   });
 };
-
 console.log(filterFunction(transactions));
+/*
+ Here you are to finish the function `aboveAverageFunction` so it returns a new instance of the original array, 
+ where each entry has received a new boolean attribute `isPriceAboveAverage` stating if this entries price is above the average.
+
+ The average is to be calculated from all the entries in the transactions array.
+*/
 // Assignment 2:
-const aboveAverageFunction = (data) => {};
+const aboveAverageFunction = (data) => {
+  return data.filter((transaction) => {
+    if (transaction.price >= 50) {
+      return Object.assign(transaction, { isPriceAboveAverage: true });
+    } else {
+      return Object.assign(transaction, { isPriceAboveAverage: false });
+    }
+  });
+};
+console.log(aboveAverageFunction(transactions));

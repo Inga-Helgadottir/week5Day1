@@ -3,7 +3,7 @@ console.log("Running assignment...");
 const transactions = require("./simple-transaction-data").data;
 
 let arrayOfVISA = [];
-/*
+/* Assignment 1:
 In assignment.js I have imported a dummy data set, containing an array of transactions. 
 And I have started the assignment with defining the function `filterFunction`, 
 you are to finish this function so it returns a filtered list of transactions that fulfills these requirements:
@@ -19,7 +19,6 @@ you are to finish this function so it returns a filtered list of transactions th
     "category": "Home"
   }
  */
-// Assignment 1:
 const filterFunction = (data) => {
   return data.filter((transaction) => {
     return (
@@ -30,13 +29,13 @@ const filterFunction = (data) => {
   });
 };
 console.log(filterFunction(transactions));
-/*
+
+/* Assignment 2:
  Here you are to finish the function `aboveAverageFunction` so it returns a new instance of the original array, 
  where each entry has received a new boolean attribute `isPriceAboveAverage` stating if this entries price is above the average.
 
  The average is to be calculated from all the entries in the transactions array.
 */
-// Assignment 2:
 const aboveAverageFunction = (data) => {
   return data.filter((transaction) => {
     if (transaction.price >= 50) {
